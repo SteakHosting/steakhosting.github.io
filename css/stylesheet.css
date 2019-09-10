@@ -1,0 +1,104 @@
+body {
+	/*Want to change background image?*/
+	/*Upload a new one to the img folder.*/
+	/*Make sure you name it 'minecraft.jpg'*/
+	background: linear-gradient(rgba(35,20,20,0.55),rgba(35,20,20,0.55)),
+				url("../img/minecraft.jpg") no-repeat center center fixed;
+	background-size: cover;
+	font-family: Helvetica;
+	margin: 0;
+	width: 100%;
+}
+
+html, body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	margin: 0;
+	padding: 3px;
+}
+
+.container {
+	text-align: center;
+}
+
+.logo img {
+	width: 250px;
+	animation-name: logo;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes logo {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.playercount {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px;
+	background-color: rgba(201, 48, 58, 0.65);
+	font-size: 1.22em;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.playercount span {
+	font-weight: bold;
+}
+
+.items {
+	display: flex;
+	justify-content: space-around;
+	flex-basis: 100px;
+	padding: 18px 0 10px 0;
+
+}
+
+.item img {
+	transition: all 0.3s ease;
+}
+
+.item img:hover {
+	transform:scale(1.25);
+}
+
+.img {
+	width: 100%;
+}
+
+@media(min-width: 600px) {
+	.logo img {
+		width: 350px;
+	}
+	.img {
+		width: 100%;
+	}
+	.items {
+		padding: 30px 0 20px 0;
+	}
+}
+
+@media(min-width: 1000px) {
+	.items {
+		justify-content: center;
+	}
+
+	.item:not(:first-child) {
+		margin-left: 90px;
+	}
+}
